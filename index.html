@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FloorFlow Architects — Operational Excellence for MSMEs</title>
+<meta name="description" content="FloorFlow Architects helps MSMEs reduce costs, optimize manpower, improve production flow and implement digital transformation.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+        colors: {
+          navy: '#0a1f44',
+          brandGreen: '#22c55e',
+          brandBlue: '#2563eb',
+        },
+      },
+    },
+  };
+</script>
+
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; -webkit-font-smoothing: antialiased; }
+
+  /* Continuous marquee */
+  @keyframes marquee-scroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .marquee-track      { width: max-content; animation: marquee-scroll 35s linear infinite; }
+  .marquee-track-slow { width: max-content; animation: marquee-scroll 45s linear infinite; }
+  .marquee-track:hover,
+  .marquee-track-slow:hover { animation-play-state: paused; }
+
+  .marquee-mask {
+    -webkit-mask-image: linear-gradient(to right, transparent 0, black 80px, black calc(100% - 80px), transparent 100%);
+            mask-image: linear-gradient(to right, transparent 0, black 80px, black calc(100% - 80px), transparent 100%);
+  }
+
+  /* Header shadow on scroll */
+  .header-scrolled { background: rgba(10,31,68,0.95); backdrop-filter: blur(6px); box-shadow: 0 4px 20px rgba(0,0,0,0.15); }
+
+  /* Mobile menu */
+  .mobile-nav.hidden { display: none; }
+</style>
+</head>
+
+<body class="bg-white text-navy">
+
+<!-- HEADER -->
+<header id="site-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 py-5 flex items-center justify-between">
+    <a href="#home" class="text-white font-bold text-xl lg:text-2xl tracking-tight">FloorFlow Architects</a>
+
+    <nav class="hidden lg:flex items-center gap-8">
+      <a href="#home"        class="text-white/90 hover:text-brandGreen text-[15px] font-medium transition-colors">Home</a>
+      <a href="#about"       class="text-white/90 hover:text-brandGreen text-[15px] font-medium transition-colors">About</a>
+      <a href="#services"    class="text-white/90 hover:text-brandGreen text-[15px] font-medium transition-colors">Services</a>
+      <a href="#case-studies"class="text-white/90 hover:text-brandGreen text-[15px] font-medium transition-colors">Case Studies</a>
+      <a href="#reviews"     class="text-white/90 hover:text-brandGreen text-[15px] font-medium transition-colors">Reviews</a>
+      <a href="#connect"     class="text-white/90 hover:text-brandGreen text-[15px] font-medium transition-colors">Connect</a>
+    </nav>
+
+    <button id="menu-toggle" class="lg:hidden text-white" aria-label="Toggle menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg>
+    </button>
+  </div>
+
+  <div id="mobile-nav" class="mobile-nav hidden lg:hidden bg-navy/95 backdrop-blur border-t border-white/10">
+    <nav class="flex flex-col px-6 py-4 gap-4">
+      <a href="#home"        class="mobile-link text-white/90 text-base font-medium">Home</a>
+      <a href="#about"       class="mobile-link text-white/90 text-base font-medium">About</a>
+      <a href="#services"    class="mobile-link text-white/90 text-base font-medium">Services</a>
+      <a href="#case-studies"class="mobile-link text-white/90 text-base font-medium">Case Studies</a>
+      <a href="#reviews"     class="mobile-link text-white/90 text-base font-medium">Reviews</a>
+      <a href="#connect"     class="mobile-link text-white/90 text-base font-medium">Connect</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="home" class="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden">
+  <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('https://www.leveragebusinessone.com.au/wp-content/uploads/2019/05/Shop-Floor.jpg')"></div>
+  <div class="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/85 to-navy/50"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 w-full">
+    <div class="max-w-3xl">
+      <h1 class="text-white font-bold leading-tight text-4xl sm:text-5xl lg:text-6xl tracking-tight">
+        Transforming MSME Manufacturing Operations Through
+        <span class="text-brandGreen">Operational Excellence &amp; Lean Thinking</span>
+      </h1>
+
+      <p class="text-white/85 text-base lg:text-lg mt-6 max-w-2xl leading-relaxed">
+        We help manufacturing businesses reduce operational costs, optimize manpower, improve production flow, and implement practical digital transformation systems.
+      </p>
+
+      <div class="flex flex-wrap gap-x-10 gap-y-6 mt-10">
+        <div class="flex flex-col items-center text-center">
+          <div class="w-14 h-14 flex items-center justify-center rounded-lg border-2 border-brandGreen/60">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7 text-brandGreen"><path d="M16 17h6v-6"/><path d="m22 17-8.5-8.5-5 5L2 7"/></svg>
+          </div>
+          <span class="text-white text-sm mt-2 font-medium whitespace-nowrap">Reduce Costs</span>
+        </div>
+        <div class="flex flex-col items-center text-center">
+          <div class="w-14 h-14 flex items-center justify-center rounded-lg border-2 border-brandGreen/60">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7 text-brandGreen"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg>
+          </div>
+          <span class="text-white text-sm mt-2 font-medium whitespace-nowrap">Optimize Manpower</span>
+        </div>
+        <div class="flex flex-col items-center text-center">
+          <div class="w-14 h-14 flex items-center justify-center rounded-lg border-2 border-brandGreen/60">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7 text-brandGreen"><path d="M15 6a9 9 0 0 0-9 9V3"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/></svg>
+          </div>
+          <span class="text-white text-sm mt-2 font-medium whitespace-nowrap">Improve Flow</span>
+        </div>
+        <div class="flex flex-col items-center text-center">
+          <div class="w-14 h-14 flex items-center justify-center rounded-lg border-2 border-brandGreen/60">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7 text-brandGreen"><path d="M12 20v2"/><path d="M12 2v2"/><path d="M17 20v2"/><path d="M17 2v2"/><path d="M2 12h2"/><path d="M2 17h2"/><path d="M2 7h2"/><path d="M20 12h2"/><path d="M20 17h2"/><path d="M20 7h2"/><path d="M7 20v2"/><path d="M7 2v2"/><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="8" y="8" width="8" height="8" rx="1"/></svg>
+          </div>
+          <span class="text-white text-sm mt-2 font-medium whitespace-nowrap">Digital Transformation</span>
+        </div>
+      </div>
+
+      <a href="https://wa.me/919035753007" target="_blank" rel="noopener" class="inline-flex items-center gap-3 mt-10 bg-brandGreen hover:bg-[#1ea34e] text-white px-7 py-4 rounded-full font-semibold text-base shadow-lg transition-all duration-200 hover:-translate-y-0.5">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></svg>
+        Connect on WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-20 lg:py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div>
+        <p class="text-brandGreen font-semibold tracking-widest text-sm uppercase mb-3">About Us</p>
+        <h2 class="text-navy text-3xl lg:text-4xl font-bold leading-tight">Driving Operational Excellence for Manufacturing MSMEs</h2>
+
+        <p class="text-gray-600 text-[15px] lg:text-base leading-relaxed mt-6">
+          FloorFlow Architects is a manufacturing and operations consulting firm focused on helping MSMEs improve efficiency through Lean Manufacturing and process optimization.
+        </p>
+        <p class="text-gray-600 text-[15px] lg:text-base leading-relaxed mt-4">
+          We specialize in identifying bottlenecks, eliminating waste, improving production flow, and implementing scalable systems that enhance productivity and profitability.
+        </p>
+
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-10">
+          <div class="flex flex-col items-center text-center">
+            <div class="w-14 h-14 flex items-center justify-center rounded-full bg-blue-50">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-brandBlue"><path d="M12 16h.01"/><path d="M16 16h.01"/><path d="M3 19a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8.5a.5.5 0 0 0-.769-.422l-4.462 2.844A.5.5 0 0 1 15 10.5v-2a.5.5 0 0 0-.769-.422L9.77 10.922A.5.5 0 0 1 9 10.5V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2z"/><path d="M8 16h.01"/></svg>
+            </div>
+            <p class="text-navy font-semibold text-sm mt-3 leading-snug">Shopfloor<br>Expertise</p>
+          </div>
+          <div class="flex flex-col items-center text-center">
+            <div class="w-14 h-14 flex items-center justify-center rounded-full bg-blue-50">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-brandBlue"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
+            </div>
+            <p class="text-navy font-semibold text-sm mt-3 leading-snug">Lean &amp;<br>Kaizen Driven</p>
+          </div>
+          <div class="flex flex-col items-center text-center">
+            <div class="w-14 h-14 flex items-center justify-center rounded-full bg-blue-50">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-brandBlue"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
+            </div>
+            <p class="text-navy font-semibold text-sm mt-3 leading-snug">Data-Backed<br>Approach</p>
+          </div>
+          <div class="flex flex-col items-center text-center">
+            <div class="w-14 h-14 flex items-center justify-center rounded-full bg-blue-50">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-brandBlue"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" x2="9.01" y1="9" y2="9"/><line x1="15" x2="15.01" y1="9" y2="9"/></svg>
+            </div>
+            <p class="text-navy font-semibold text-sm mt-3 leading-snug">Sustainable<br>Results</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative">
+        <div class="absolute -inset-4 bg-blue-50 rounded-2xl -z-10"></div>
+        <img src="https://img.etimg.com/thumb/width-420,height-315,imgsize-117448,resizemode-75,msid-106833021/news/company/corporate-trends/shop-floors-turning-new-frontier-for-digitisation/workers-operate-a-machine-at-the-manufacturing-facility-of-first-solar-at-sriperumbudur-in-kanchipuram-district-on-january-11-2024-.jpg" alt="Workers operating machines at manufacturing facility" class="w-full h-[400px] lg:h-[460px] object-cover object-center rounded-xl shadow-xl">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="py-20 lg:py-24 bg-[#f5f7fb]">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="text-center mb-14">
+      <p class="text-brandGreen font-semibold tracking-widest text-sm uppercase mb-3">Our Services</p>
+      <h2 class="text-navy text-3xl lg:text-4xl font-bold leading-tight">End-to-End Operational Improvement Solutions</h2>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+
+      <div class="bg-white rounded-xl p-6 text-center shadow-sm hover:shadow-xl border border-gray-100 transition-all duration-300 hover:-translate-y-1 group flex flex-col">
+        <div class="w-14 h-14 mx-auto flex items-center justify-center rounded-xl bg-blue-50 group-hover:bg-blue-100 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7 text-brandBlue"><path d="M12 16h.01"/><path d="M16 16h.01"/><path d="M3 19a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8.5a.5.5 0 0 0-.769-.422l-4.462 2.844A.5.5 0 0 1 15 10.5v-2a.5.5 0 0 0-.769-.422L9.77 10.922A.5.5 0 0 1 9 10.5V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2z"/><path d="M8 16h.01"/></svg>
+        </div>
+        <h3 class="text-navy font-bold text-base mt-4 leading-tight min-h-[48px] flex items-center justify-center">Lean &amp; Operational Excellence</h3>
+        <p class="text-gray-600 text-sm mt-2 leading-relaxed">Eliminate waste and drive operational excellence across your shopfloor.</p>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 text-center shadow-sm hover:shadow-xl border border-gray-100 transition-all duration-300 hover:-translate-y-1 group flex flex-col">
+        <div class="w-14 h-14 mx-auto flex items-center justify-center rounded-xl bg-blue-50 group-hover:bg-blue-100 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7 text-brandBlue"><path d="m17 2 4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/></svg>
+        </div>
+        <h3 class="text-navy font-bold text-base mt-4 leading-tight min-h-[48px] flex items-center justify-center">Supply Chain &amp; Continuous Improvements</h3>
+        <p class="text-gray-600 text-sm mt-2 leading-relaxed">Optimize supply chain and build a culture of continuous improvement.</p>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 text-center shadow-sm hover:shadow-xl border border-gray-100 transition-all duration-300 hover:-translate-y-1 group flex flex-col">
+        <div class="w-14 h-14 mx-auto flex items-center justify-center rounded-xl bg-blue-50 group-hover:bg-blue-100 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7 text-brandBlue"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><polyline points="3.29 7 12 12 20.71 7"/><path d="m7.5 4.27 9 5.15"/></svg>
+        </div>
+        <h3 class="text-navy font-bold text-base mt-4 leading-tight min-h-[48px] flex items-center justify-center">Warehouse &amp; Inventory Optimization</h3>
+        <p class="text-gray-600 text-sm mt-2 leading-relaxed">Optimize inventory movement and storage utilization.</p>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 text-center shadow-sm hover:shadow-xl border border-gray-100 transition-all duration-300 hover:-translate-y-1 group flex flex-col">
+        <div class="w-14 h-14 mx-auto flex items-center justify-center rounded-xl bg-blue-50 group-hover:bg-blue-100 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7 text-brandBlue"><path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+        <h3 class="text-navy font-bold text-base mt-4 leading-tight min-h-[48px] flex items-center justify-center">ERP &amp; Digitalization</h3>
+        <p class="text-gray-600 text-sm mt-2 leading-relaxed">Bridge shopfloor operations with digital systems for visibility.</p>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 text-center shadow-sm hover:shadow-xl border border-gray-100 transition-all duration-300 hover:-translate-y-1 group flex flex-col">
+        <div class="w-14 h-14 mx-auto flex items-center justify-center rounded-xl bg-blue-50 group-hover:bg-blue-100 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7 text-brandBlue"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
+        </div>
+        <h3 class="text-navy font-bold text-base mt-4 leading-tight min-h-[48px] flex items-center justify-center">Factory Redesign</h3>
+        <p class="text-gray-600 text-sm mt-2 leading-relaxed">Redesign layouts and lines to maximize flow, capacity and efficiency.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDIES (marquee) -->
+<section id="case-studies" class="py-20 lg:py-24 bg-navy overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="text-center mb-14">
+      <p class="text-brandGreen font-semibold tracking-widest text-sm uppercase mb-3">Case Studies</p>
+      <h2 class="text-white text-3xl lg:text-4xl font-bold leading-tight">Delivering Measurable Results Across Industries</h2>
+    </div>
+  </div>
+
+  <div class="marquee-mask relative">
+    <div class="marquee-track flex gap-6 px-6" id="case-marquee"></div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS (marquee) -->
+<section id="reviews" class="py-20 lg:py-24 bg-[#f5f7fb] overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="text-center mb-14">
+      <p class="text-brandGreen font-semibold tracking-widest text-sm uppercase mb-3">Client Testimonials</p>
+      <h2 class="text-navy text-3xl lg:text-4xl font-bold">What Our Clients Say</h2>
+    </div>
+  </div>
+
+  <div class="marquee-mask relative">
+    <div class="marquee-track-slow flex gap-6 px-6" id="testimonial-marquee"></div>
+  </div>
+</section>
+
+<!-- CONNECT / FOOTER -->
+<section id="connect" class="relative overflow-hidden">
+  <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('https://static.vecteezy.com/system/resources/thumbnails/050/681/317/small/wide-view-of-a-modern-manufacturing-facility-filled-with-machinery-and-assembly-lines-during-daylight-photo.jpg')"></div>
+  <div class="absolute inset-0 bg-navy/95"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 pt-20 pb-10">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16">
+      <div>
+        <p class="text-brandGreen font-semibold tracking-widest text-sm uppercase mb-3">Let's Connect</p>
+        <h2 class="text-white text-3xl lg:text-4xl font-bold leading-tight">Let's Build Smarter Manufacturing Operations</h2>
+        <p class="text-white/80 text-[15px] leading-relaxed mt-5 max-w-xl">
+          Facing production inefficiencies, high manpower costs, inventory losses, or scaling challenges? Let's discuss how we can help transform your operations.
+        </p>
+        <a href="https://wa.me/919035753007" target="_blank" rel="noopener" class="inline-flex items-center gap-3 mt-8 bg-brandGreen hover:bg-[#1ea34e] text-white px-7 py-4 rounded-full font-semibold text-base shadow-lg transition-all duration-200 hover:-translate-y-0.5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></svg>
+          Chat on WhatsApp
+        </a>
+      </div>
+
+      <div class="flex flex-col gap-6 lg:pt-12">
+        <a href="tel:+919035753007" class="flex items-start gap-4 hover:opacity-80 transition-opacity">
+          <div class="w-11 h-11 rounded-full border-2 border-white/30 flex items-center justify-center text-white shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>
+          </div>
+          <div>
+            <p class="text-white/70 text-sm">Phone</p>
+            <p class="text-white font-medium text-base mt-1">+91 9035753007</p>
+          </div>
+        </a>
+
+        <a href="mailto:connect@floorflowarchitect.in" class="flex items-start gap-4 hover:opacity-80 transition-opacity">
+          <div class="w-11 h-11 rounded-full border-2 border-white/30 flex items-center justify-center text-white shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+          </div>
+          <div>
+            <p class="text-white/70 text-sm">Email</p>
+            <p class="text-white font-medium text-base mt-1">connect@floorflowarchitect.in</p>
+          </div>
+        </a>
+
+        <div class="flex items-start gap-4">
+          <div class="w-11 h-11 rounded-full border-2 border-white/30 flex items-center justify-center text-white shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <p class="text-white/70 text-sm">Location</p>
+            <p class="text-white font-medium text-base mt-1">Bangalore, India</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-t border-white/10 mt-16 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-white/60 text-sm text-center">© <span id="year"></span> FloorFlow Architects. All Rights Reserved.</p>
+      <button id="scroll-top" aria-label="Scroll to top" class="w-10 h-10 rounded-full bg-brandBlue hover:bg-[#1d4ed8] text-white flex items-center justify-center shadow-lg transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<script>
+  // SVG icons (reusable)
+  const factoryIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-brandBlue"><path d="M12 16h.01"/><path d="M16 16h.01"/><path d="M3 19a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8.5a.5.5 0 0 0-.769-.422l-4.462 2.844A.5.5 0 0 1 15 10.5v-2a.5.5 0 0 0-.769-.422L9.77 10.922A.5.5 0 0 1 9 10.5V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2z"/><path d="M8 16h.01"/></svg>`;
+  const quoteIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-brandBlue"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/></svg>`;
+
+  // Data
+  const caseStudies = [
+    { company: 'Textile & Apparel Industry',         industry: 'Fabric & Textile',          description: 'Improved production flow and warehouse setup leading to 22% productivity increase.' },
+    { company: 'FMCG & Food Processing Industry',    industry: 'FMCG & Food Processing',    description: 'Reduced production costs by 18% through process optimization and waste reduction.' },
+    { company: 'Electronics Manufacturing Industry', industry: 'Electronics Manufacturing', description: 'Implemented MES & traceability systems improving visibility and accuracy by 35%.' },
+    { company: 'Automotive Industry',                industry: 'Automotive Manufacturing',  description: 'Shopfloor layout redesign and line balancing improved throughput by 28%.' },
+    { company: 'Fabrication Industry',               industry: 'Fabrication Industry',      description: 'Space optimization project improved utility of floor space by 32%.' },
+    { company: 'Food Processing Industry',           industry: 'Food Processing',           description: 'Inventory optimization reduced losses and improved on-time dispatch by 25%.' },
+    { company: 'Heavy Engineering Industry',         industry: 'Heavy Engineering',         description: 'Process re-engineering reduced lead times by 30% and improved quality output.' },
+    { company: 'Automotive Components Industry',     industry: 'Automotive Components',     description: 'Lean transformation reduced operational waste by 24% and improved OEE significantly.' },
+  ];
+
+  const testimonials = [
+    { quote: 'Operational visibility improved significantly after implementing shopfloor tracking systems.',      author: 'Plant Head',        company: 'Electronics Manufacturer' },
+    { quote: 'Lean practices and process optimization helped us reduce manpower dependency and improve output.',  author: 'CEO',               company: 'FMCG Company' },
+    { quote: 'Excellent support in 5S and Kaizen implementation. Our shopfloor culture improved drastically.',   author: 'Managing Partner',  company: 'Refurbished Electronics Manufacturer' },
+    { quote: 'Their practical approach helped us identify real issues and implement sustainable solutions.',      author: 'Plant Head',        company: 'Automotive Components Manufacturer' },
+    { quote: 'Throughput time reduced and production flow improved significantly with their guidance.',          author: 'CEO',               company: 'Consumer Durables Manufacturer' },
+    { quote: 'Best consulting experience with measurable results. Strong understanding of the shopfloor realities.', author: 'Managing Director', company: 'Fabrication Company' },
+    { quote: 'Their data-driven recommendations transformed our planning and scheduling effectiveness.',         author: 'COO',               company: 'Textile Manufacturer' },
+    { quote: 'The team brought hands-on expertise and partnered with us every step of the way.',                 author: 'Director',          company: 'Food Processing Company' },
+  ];
+
+  function caseCard(c) {
+    return `
+      <div class="shrink-0 w-[320px] sm:w-[360px] bg-white rounded-xl shadow-xl p-7 flex flex-col">
+        <div class="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center">${factoryIcon}</div>
+        <h3 class="text-navy font-bold text-lg mt-5 leading-snug">${c.company}</h3>
+        <p class="text-brandBlue text-sm font-medium mt-1">${c.industry}</p>
+        <p class="text-gray-600 text-sm leading-relaxed mt-4">${c.description}</p>
+      </div>`;
+  }
+
+  function testimonialCard(t) {
+    return `
+      <div class="shrink-0 w-[320px] sm:w-[380px] bg-white rounded-xl p-7 shadow-sm border border-gray-100 flex flex-col">
+        ${quoteIcon}
+        <p class="text-gray-700 text-[15px] leading-relaxed mt-4 flex-1">${t.quote}</p>
+        <div class="mt-5 pt-4 border-t border-gray-100">
+          <p class="text-navy font-semibold text-sm">— ${t.author}</p>
+          <p class="text-brandBlue text-sm mt-1">${t.company}</p>
+        </div>
+      </div>`;
+  }
+
+  // Build marquees (duplicate for seamless loop)
+  document.getElementById('case-marquee').innerHTML = [...caseStudies, ...caseStudies].map(caseCard).join('');
+  document.getElementById('testimonial-marquee').innerHTML = [...testimonials, ...testimonials].map(testimonialCard).join('');
+
+  // Year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Scroll to top
+  document.getElementById('scroll-top').addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+  // Mobile menu
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileNav  = document.getElementById('mobile-nav');
+  menuToggle.addEventListener('click', () => mobileNav.classList.toggle('hidden'));
+  document.querySelectorAll('.mobile-link').forEach(l => l.addEventListener('click', () => mobileNav.classList.add('hidden')));
+
+  // Header bg on scroll
+  const header = document.getElementById('site-header');
+  const onScroll = () => header.classList.toggle('header-scrolled', window.scrollY > 30);
+  window.addEventListener('scroll', onScroll);
+  onScroll();
+</script>
+
+</body>
+</html>
